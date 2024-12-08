@@ -15,21 +15,58 @@
   width: 25em;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  & p {
+    margin-top: 0;
+  }
 }
 .close {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+
+  & p {
+    margin: 0;
+    /* border: 1px solid #ccc; */
+    background-color: #ccc;
+    border-radius: 50px;
+    padding: 0.025rem 0.5rem;
+    transition-property: background-color, opacity;
+    transition-duration: 250ms;
+    &:hover {
+      background-color: rgb(204, 204, 204, 0.9);
+      cursor: pointer;
+    }
+    &:focus,
+    &:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    }
+  }
 }
+
 h1 {
   margin-bottom: 0;
 }
-p {
-  margin-top: 0;
-}
+
 .btnSubmit {
-  background-color: #42a942;
+  background-color: rgb(66, 169, 66);
+  transition-property: background-color, opacity;
+  transition-duration: 250ms;
+
+  &:hover {
+    background-color: rgba(66, 169, 66, 0.9);
+  }
 }
 
 .btnCancel {
-  background-color: #d9534f;
+  background-color: rgb(217, 83, 79);
+  &:hover {
+    background-color: rgba(217, 83, 79, 0.9);
+    transition-property: background-color, opacity;
+    transition-duration: 250ms;
+  }
+}
+
+.footerBtns {
+  display: flex;
+  justify-content: space-around;
 }
