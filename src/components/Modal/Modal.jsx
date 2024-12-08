@@ -1,11 +1,11 @@
 import css from './Modal.module.css';
 
-const Modal = ({ onClose, onSubmit, onCancel }) => {
+const Modal = ({ onClose, onSubmit, onCancel, setShowModal }) => {
   return (
     <div className={css.modal}>
       <div className={css.modalContent}>
         <div className={css.close}>
-          <p onClick={() => onClose(false)}>&times;</p>{' '}
+          <p onClick={() => onClose(setShowModal)}>&times;</p>{' '}
         </div>
         <h1>This is a modal</h1>
         <p>It shows the functionality of a modal</p>

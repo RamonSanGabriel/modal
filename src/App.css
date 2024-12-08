@@ -12,6 +12,6 @@
   transition-duration: 250ms;
 
   &:hover {
-    background-color: rgb(106, 90, 205, 0.5);
+    background-color: rgb(106, 90, 205, 0.9);
   }
 }
