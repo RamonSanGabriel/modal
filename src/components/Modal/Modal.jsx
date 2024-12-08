@@ -14,7 +14,7 @@ const Modal = ({ onClose, onSubmit, onCancel, setShowModal }) => {
             Submit
           </button>
           <button onClick={() => onCancel} className={css.btnCancel}>
-            cancel
+            Cancel
           </button>
         </div>
       </div>
