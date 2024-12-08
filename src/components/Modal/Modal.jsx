@@ -2,7 +2,14 @@ import css from './Modal.module.css';
 
 const Modal = ({ onClose, onSubmit, onCancel, handleCloseModal }) => {
   return (
-    <div className={css.modal}>
+    <div
+      className={css.modal}
+      onClick={(e) => {
+        if (e.target.className === css.modal) {
+          onClose('outside portion of modal');
+        }
+      }}
+    >
       <div className={css.modalContent}>
         <div className={css.close}>
           <p onClick={() => onClose('close')}>&times;</p>{' '}
