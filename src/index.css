@@ -53,16 +53,16 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto;
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: inherit;
+    color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: inherit;
+    color: #747bff;
   }
   button {
     background-color: #f9f9f9;
