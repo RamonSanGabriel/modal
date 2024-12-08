@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Modal from './components/Modal/Modal';
+import { createPortal } from 'react-dom';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -24,11 +25,14 @@ function App() {
         </p>
       )}
       {showModal ? (
-        <Modal
-          onClose={handleCloseModal}
-          onSubmit={handleCloseModal}
-          onCancel={handleCloseModal}
-        />
+        createPortal(
+          <Modal
+            onClose={handleCloseModal}
+            onSubmit={handleCloseModal}
+            onCancel={handleCloseModal}
+          />,
+          document.body
+        )
       ) : (
         <button className="show-modal-btn" onClick={handleShowModal}>
           Show Modal
