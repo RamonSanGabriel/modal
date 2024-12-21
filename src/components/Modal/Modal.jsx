@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import css from './Modal.module.css';
 
-const Modal = ({ onClose, onSubmit, onCancel, handleCloseModal }) => {
+const Modal = ({ onClose, onSubmit, onCancel, showModal }) => {
+  useEffect(() => {
+    document.body.style.overflow = showModal ? 'hidden' : 'unset';
+  }, [showModal]);
   return (
     <div
       className={css.modal}
