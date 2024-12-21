@@ -3,7 +3,11 @@ import css from './Modal.module.css';
 
 const Modal = ({ onClose, onSubmit, onCancel, showModal }) => {
   useEffect(() => {
-    document.body.style.overflow = showModal ? 'hidden' : 'unset';
+    if (showModal) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'visible';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [showModal]);
   return (
     <div
